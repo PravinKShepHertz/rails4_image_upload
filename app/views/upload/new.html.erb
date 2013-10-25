@@ -1,0 +1,20 @@
+<h3>Fill image upload details</h3></br>
+<%= form_tag(upload_create_path, :multipart => true ) do %>
+  <div class="field_box">
+	<%= label_tag(:name, "File name:") %></span>			
+	<%= text_field_tag :name %></span>
+  </div>	
+  <div class="field_box">
+	<%= label_tag(:file, "File Path:") %></span>			
+	<%= file_field_tag :file %></span>
+  </div>
+  <div class="field_box">
+	<%= label_tag(:description, "Description:") %></span>			
+	<%= text_field_tag :description %></span>
+  </div>	
+  <div class="field_box_center">
+	<%= submit_tag "submit" %>
+  </div>
+<% end %>
+</br>
+<%= link_to "View all Images", upload_index_path %>

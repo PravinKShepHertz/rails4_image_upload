@@ -1,0 +1,17 @@
+<% if @upload %>
+<h3>All uploaded Images</h3></br>
+<ul>
+  <% @upload.fileList.each do |image| %>
+    <li><a href="#"><%= image_tag "#{image.url}", :size => "110x110" %></a>
+      <div class="image-hover">
+        <h5>Lorem ipsum sit amet dolor.</h5>
+        <h6>Category Name</h6>
+        <a href="#" class="preview">Preview image</a> </div>
+    </li>           
+  <% end %>
+ </ul>
+ <% else %>
+   No Image
+ <% end %>
+
+ <%= link_to "Upload New Image", upload_new_path %>
